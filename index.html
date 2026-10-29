@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ef">
+  <title>2048 — Brighten your day</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game" aria-labelledby="game-title">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="2048 home"><span class="brand-mark">2</span><span>little big numbers</span></a>
+      <button class="reset-button" id="reset" type="button"><span aria-hidden="true">↻</span> New game</button>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">A little puzzle break</p>
+        <h1 id="game-title">2048<span class="title-sparkle" aria-hidden="true">✳</span></h1>
+        <p class="subtitle">Join the numbers. Find your flow.</p>
+      </div>
+      <div class="scores" aria-label="Game scores">
+        <div class="score-card"><span class="score-label">SCORE</span><strong id="score">0</strong><span class="score-pop" id="score-pop" aria-live="polite"></span></div>
+        <div class="score-card best-card"><span class="score-label">BEST</span><strong id="best">0</strong></div>
+      </div>
+    </section>
+
+    <section class="board-shell" aria-label="2048 game">
+      <div class="board" id="board" role="grid" aria-label="Game board">
+        <div class="cells" id="cells" aria-hidden="true"></div>
+        <div class="tiles" id="tiles"></div>
+      </div>
+      <canvas class="fireworks-canvas" id="fireworks" aria-hidden="true"></canvas>
+      <div class="game-overlay" id="overlay" hidden>
+        <div class="overlay-card">
+          <span class="overlay-icon" id="overlay-icon" aria-hidden="true">🎉</span>
+          <h2 id="overlay-title">You made it!</h2>
+          <p id="overlay-message">A lovely bit of number magic.</p>
+          <div class="overlay-actions">
+            <button class="primary-button" id="continue" type="button">Keep playing</button>
+            <button class="secondary-button" id="play-again" type="button">New game</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="below-board">
+      <p class="controls-hint"><span class="key-cluster" aria-hidden="true"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></span><span>or <b>W A S D</b> to move</span></p>
+      <p class="save-note"><span aria-hidden="true">✦</span> Your game saves automatically</p>
+    </section>
+
+    <section class="powerups" id="powerups" aria-label="Power-ups" hidden>
+      <p class="powerups-title">A little extra magic <span aria-hidden="true">✦</span></p>
+      <div class="powerup-list" id="powerup-list"></div>
+    </section>
+
+    <footer><span>Made for your next little break</span><span class="footer-heart" aria-hidden="true">♥</span></footer>
+  </main>
+</body>
+</html>
